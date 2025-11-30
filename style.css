@@ -1,21 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html, body {
     height: 100%;
     width: 100%;
     background-color: black;
 }
+
+/* Your CSS variables */
 :root {
     --x: 400px;
     --y: 400px;
 }
 
+/* Full-screen background video instead of invalid background-image: mp4 */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Your original spotlight gradient box */
 #box {
     height: 100%;
     width: 100%;
-    background: radial-gradient(at var(--x) var(--y), rgb(214, 201, 201), rgb(36, 36, 23));
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background: radial-gradient(
+        150px at var(--x) var(--y),
+        rgba(255, 255, 255, 0),
+        rgb(36, 36, 23)
+    );
+
     border: 1px solid white;
+    pointer-events: none;
 }

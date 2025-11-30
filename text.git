@@ -1,3 +1,35 @@
 git restore --staged script.js
 git add script.js
 git commit -m "updated 3 files with minor projects"
+
+
+
+
+
+
+
+# 1. Check current status and branches
+git status
+git branch -a
+git log --oneline --decorate --graph --all
+
+# 2. If you haven't made any commits yet, create the initial commit
+git add .
+git commit -m "Initial commit"
+
+# 3. Ensure your local branch is named `main`
+git branch -M main
+
+# 4. Fix the remote (either update URL or re-add)
+# Option A: update existing origin URL
+git remote set-url origin https://github.com/Suhail-01/AdvancedCss.git
+
+# Option B (if you prefer to remove and add)
+# git remote remove origin
+# git remote add origin https://github.com/Suhail-01/AdvancedCss.git
+
+# 5. Push your main branch to GitHub
+git push -u origin main
+
+# If you are on a different branch and want to push its current HEAD as `main` remotely:
+# git push -u origin HEAD:main
