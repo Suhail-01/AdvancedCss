@@ -23,17 +23,32 @@ body{
     }
 }
 
-#box {
+/* #box {
     height: 200px;
     width: 400px;
     background: conic-gradient( from 80deg,
-        #FF00FF,  /* bright magenta */
-        #00FFFF,  /* cyan */
-        #FFFF00,  /* yellow */
-        #FF4500,  /* orange-red */
-        #32CD32,  /* lime green */
-        #8A2BE2,  /* blue-violet */
-        #FF1493   /* deep pink */
+        #FF00FF,
+        #00FFFF,  
+        #FFFF00,  
+        #FF4500,  
+        #32CD32,  
+        #8A2BE2,  
+        #FF1493   
     );
     animation: abc 1s infinite forwards alternate;
+} */
+
+
+
+
+@property --bgcolor{
+    syntax: "<color>";
+    initial-value: rgb(110, 170, 26);
+    inherits: false;
+}
+#box{
+    height: 202px;
+    width: 400px;
+    border: 1px solid whitesmoke;
+    background-color: var(--bgcolor);
 }
