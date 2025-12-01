@@ -4,7 +4,6 @@ const characters = `
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 `.replace(/\s+/g, ""); // removes spaces & newlines → clean character list
-
 const text = para.innerHTML;
 let itration = 0;
 para.addEventListener("mouseenter", () => {
