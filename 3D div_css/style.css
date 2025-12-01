@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes abc {
+    from {
+        border-radius: 0%;   /* Square corners */
+    }
+    to {
+        border-radius: 50%;  /* More rounded corners */
+    }
+}
+
+#box {
+    height: 200px;
+    width: 400px;
+    background: conic-gradient( from 80deg,
+        #FF00FF,  /* bright magenta */
+        #00FFFF,  /* cyan */
+        #FFFF00,  /* yellow */
+        #FF4500,  /* orange-red */
+        #32CD32,  /* lime green */
+        #8A2BE2,  /* blue-violet */
+        #FF1493   /* deep pink */
+    );
+    animation: abc 1s infinite forwards alternate;
+}
