@@ -41,14 +41,67 @@ body{
 
 
 
-@property --bgcolor{
+/* @property --bgcolor{
     syntax: "<color>";
     initial-value: rgb(110, 170, 26);
     inherits: false;
 }
-#box{
+
+@keyframes animate{
+    from{
+        --bgcolor: blue;
+    }
+    to{
+        --bgcolor:red;
+    }
+} */
+
+/* #box{
     height: 202px;
     width: 400px;
     border: 1px solid whitesmoke;
     background-color: var(--bgcolor);
+    animation: animate 10 s;
+} */
+
+
+@property --rotate{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes animation {
+    from {
+        --rotate: 0deg;
+    }
+    to {
+        --rotate: 360deg;
+    }
+}
+
+#box {
+    max-width: 250px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+
+    border-radius: 15px;
+    box-shadow: 0 0 60px rgb(242, 26, 62);
+
+    /* Animated gradient border */
+    background:
+        linear-gradient(black) padding-box,
+        conic-gradient(from var(--rotate), black, rgb(242, 26, 62), black) border-box;
+
+    border: 5px solid transparent;
+
+    animation: animation 10s linear infinite;
+}
+
+#box img {
+    width: 100%;
 }
