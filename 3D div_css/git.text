@@ -6,7 +6,9 @@ https://github.com/Suhail-01/3D_Box-Css
 
 
 
-git commit -m "Describe the change, e.g. Fix 3D div CSS layout"
+✔️ Stage ALL changes
+git add .
+git commit -m "Update HTML, CSS and docs; add image"
 git push origin main
 
 
