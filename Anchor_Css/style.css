@@ -1,10 +1,52 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html, body {
     height: 100%;
     width: 100%;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+}
+.box:hover{
+    position: relative;  
+    position-anchor: --some-anchor;
+}
+
+
+
+
+.red {
+    background-color: rgb(171, 30, 30);
+}
+
+.blue {
+    background-color: rgb(34, 34, 169);
+    position: relative;
+    anchor-name: --some-anchor;
+}
+
+.green {
+    background-color: rgb(32, 135, 32);
+}
+
+.anchor {
+    background-color: aliceblue;
+    border-radius: 10px;
+    position: absolute;
+    position-anchor: --some-anchor;
+    top: anchor(top);
+    left: anchor(left);
+    height: 50px;
+    width: 60px;
+    transition: all 0.5s linear;
 }
