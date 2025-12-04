@@ -11,19 +11,16 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
+/* All boxes are now valid anchors */
 .box {
     height: 200px;
     width: 200px;
+    position: relative;          /* REQUIRED to be an anchor */
+    anchor-name: --some-anchor;  /* The anchor name */
 }
-.box:hover{
-    position: relative;  
-    position-anchor: --some-anchor;
-}
-
-
-
 
 .red {
     background-color: rgb(171, 30, 30);
@@ -31,22 +28,33 @@ html, body {
 
 .blue {
     background-color: rgb(34, 34, 169);
-    position: relative;
-    anchor-name: --some-anchor;
 }
 
 .green {
     background-color: rgb(32, 135, 32);
 }
 
+/* The anchored element */
 .anchor {
     background-color: aliceblue;
     border-radius: 10px;
-    position: absolute;
+    position: absolute;          /* Required */
     position-anchor: --some-anchor;
+
+    /* Attach to the anchor’s coordinates */
     top: anchor(top);
-    left: anchor(left);
+    left: anchor(right);
+
+    mix-blend-mode: difference;
+    pointer-events: none;
+
     height: 50px;
     width: 60px;
+
     transition: all 0.5s linear;
 }
+
+
+
+
+
